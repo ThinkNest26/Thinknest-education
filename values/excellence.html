@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Excellence: Small steps, high standards — ThinkNest Education</title>
+<meta name="description" content="Excellence is not about one big test. It’s about knowing where each child is today and what will help them take the next step.">
+<link rel="icon" type="image/png" href="../img/thinknest-favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#173B3A;--teal:#1E7D6B;--coral:#E07B53;--muted:#5F7470;--line:#E3ECE8;--mint:#EEF5F1;--wrap:1180px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+section{scroll-margin-top:84px}
+h1,h2,h3{margin:0;letter-spacing:-.035em;color:var(--ink)}
+.kick{display:flex;align-items:center;gap:12px;font-size:12.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:18px}
+.kick:before{content:"";width:20px;height:2px;background:var(--coral);border-radius:2px}
+.lead{font-size:17px;line-height:1.85;color:var(--muted);margin:0}
+.ic{display:block;flex:none}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid #EDF1EF}
+.nav{display:flex;align-items:center;gap:24px;height:80px}
+.brand{display:flex;align-items:center;gap:8px;text-decoration:none}
+.brand img{width:52px;height:52px}
+.brand b{display:block;font-size:20px;letter-spacing:-.03em;line-height:1}
+.brand small{display:block;font-size:9.5px;font-weight:700;letter-spacing:.24em;color:var(--teal);margin-top:4px}
+.links{display:flex;gap:26px;margin:0 auto;font-weight:500;font-size:14.5px}
+.links a{text-decoration:none;color:#2F4A48}.links a:hover{color:var(--teal)}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;font-size:15px;border-radius:12px;padding:14px 22px;transition:transform .15s,box-shadow .15s,background .15s}
+.btn.dark{background:var(--ink);color:#fff;box-shadow:0 8px 20px rgba(23,59,58,.18)}
+.btn.dark:hover{transform:translateY(-1px);box-shadow:0 12px 26px rgba(23,59,58,.24)}
+.btn.light{background:#fff;color:var(--ink);border:1px solid #DDE6E2}
+.btn.light:hover{border-color:var(--teal)}
+.menu{display:none;margin-left:auto;background:none;border:1px solid #DDE6E2;border-radius:10px;padding:10px 12px;font:inherit;font-weight:600;color:var(--ink)}
+
+/* hero */
+.hero{background:radial-gradient(1200px 600px at 85% 90%,#FDF3EA 0,rgba(253,243,234,0) 60%),linear-gradient(135deg,#EAF4EE 0%,#F4F9F5 55%,#FAF8F2 100%);overflow:hidden;position:relative}
+.hero:before{content:"";position:absolute;left:-180px;bottom:-260px;width:420px;height:420px;border:1px solid #DCE9E3;border-radius:50%}
+.hgrid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:40px;padding:84px 24px 90px}
+.hero h1{font-size:clamp(46px,6.2vw,80px);line-height:1.12;font-weight:700}
+.hero h1 span{color:var(--teal)}
+.hero .lead{max-width:540px;margin:28px 0 34px;font-size:17.5px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.ring{position:relative;width:min(100%,560px);aspect-ratio:1;margin:0 auto}
+.ring .c1,.ring .c2{position:absolute;border-radius:50%}
+.ring .c1{inset:0;border:1px dashed #C7DCD3}
+.ring .c2{inset:10%;border:1px solid #DCE9E3}
+.ring .core{position:absolute;inset:24%;border-radius:50%;background:radial-gradient(circle at 50% 40%,#fff 0,#F4FAF7 70%);box-shadow:0 0 0 14px rgba(255,255,255,.6),0 30px 60px rgba(30,125,107,.14);display:flex;align-items:center;justify-content:center}
+.ring .core img{width:72%;animation:bob 4s ease-in-out infinite}
+.tag{position:absolute;display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #EDF2F0;border-radius:12px;padding:10px 14px;font-size:13px;font-weight:600;text-decoration:none;box-shadow:0 10px 24px rgba(23,59,58,.08);animation:float 6s ease-in-out infinite;white-space:nowrap}
+.tag:hover{border-color:currentColor}
+.t1{left:4%;top:9%;color:#2E6E62}.t2{right:-4%;top:17%;color:#B9673F;animation-delay:-1s}.t3{right:-8%;top:49%;color:#5E68A8;animation-delay:-2s}.t4{left:-2%;bottom:13%;color:#3C8686;animation-delay:-3s}.t5{right:2%;bottom:13%;color:#B6801E;animation-delay:-4s}.t6{left:38%;bottom:-3%;color:#3E6DB5;animation-delay:-5s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-6px) rotate(-2deg)}}
+
+/* illustration panel */
+.panel{position:relative;border-radius:32px;aspect-ratio:1.42;background:linear-gradient(135deg,#EAF4EE,#F6F4EA);overflow:hidden}
+.panel.warm{background:linear-gradient(135deg,#FCF1E8,#EEF5EE)}
+.panel .r{position:absolute;left:50%;top:50%;border-radius:50%;transform:translate(-50%,-50%)}
+.panel .r1{width:62%;aspect-ratio:1;border:1px solid #D4E4DC}.panel .r2{width:44%;aspect-ratio:1;border:1px solid #DCE9E3}
+.panel .r.dash{width:50%;border:1px dashed #BFD8CC}
+.panel .mid{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:28%;aspect-ratio:1;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 18px 40px rgba(23,59,58,.08)}
+.panel .mid.sq{border-radius:28px;color:var(--teal)}
+.panel .mid.sq.coral{color:var(--coral)}
+.panel .mid img{width:78%}
+.orb{position:absolute;width:48px;height:48px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;color:var(--teal);box-shadow:0 10px 22px rgba(23,59,58,.08)}
+.panel .sqorbs .orb{border-radius:14px;width:44px;height:44px}
+.o1{left:24%;top:16%}.o2{right:12%;top:20%}.o3{left:20%;bottom:20%}.o4{right:22%;bottom:18%}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}
+
+/* about */
+.about{padding:120px 0}
+.about h2{font-size:clamp(34px,4vw,48px);line-height:1.12;margin-bottom:26px}
+
+/* platforms */
+.plat{background:#F6F9F7;padding:110px 0}
+.phd{display:flex;flex-wrap:wrap;align-items:flex-end;gap:16px;margin-bottom:46px}
+.phd h2{font-size:clamp(34px,4vw,48px);line-height:1.1;margin-bottom:18px}
+.phd .count{margin-left:auto;color:var(--teal);font-weight:600;font-size:14px}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.pcard{background:#fff;border:1px solid #E6EEEA;border-radius:26px;padding:28px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(23,59,58,.03);transition:box-shadow .2s,transform .2s}
+.pcard:hover{box-shadow:0 18px 40px rgba(23,59,58,.08);transform:translateY(-2px)}
+.pcard.wide{grid-column:1/-1}
+.pcard.wide .pdesc{max-width:470px}
+.phead{display:flex;align-items:flex-start;gap:14px}
+.pmini{width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center}
+.pname{flex:1;padding-top:8px}.pname h3{font-size:20px}.psub{font-size:13.5px;color:var(--muted);margin-top:4px}
+.pbig{width:74px;height:74px;border-radius:22px;display:flex;align-items:center;justify-content:center;transform:rotate(-4deg)}
+.pdesc{color:var(--muted);font-size:16px;line-height:1.7;margin:30px 0 26px}
+.plabel{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6B7D79;margin-bottom:12px}
+.plabel span{letter-spacing:.04em;text-transform:none;font-weight:600;color:#9AABA7}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chip{display:inline-flex;align-items:center;gap:7px;border:1px solid #E3EAE7;border-radius:10px;padding:8px 11px;font-size:12.5px;font-weight:600;color:#2F4A48;text-decoration:none;transition:all .15s}
+.chip .go{display:none;margin-left:2px}
+.chip:hover{background:var(--ink);border-color:var(--ink);color:#fff}.chip:hover .go{display:block}
+.pdemo{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;margin:-6px 0 16px;font-weight:600;font-size:14.5px;text-decoration:none;color:inherit}.pdemo:hover{text-decoration:underline}.coral .pdemo{color:#C0694A}.indigo .pdemo{color:#5E68A8}
+.pnote{display:flex;gap:10px;align-items:flex-start;margin:-6px 0 20px;padding:12px 14px;border-radius:12px;background:#F7FAF8;border:1px dashed #D5E3DD;font-size:14px;line-height:1.55;color:#4C625E}.pnote .ic{margin-top:2px;color:var(--teal)}
+.ptrial{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin:0 0 20px;padding:16px 18px;border-radius:14px;background:#E6F2F2;color:#1F5F5F}
+.ptrial div{flex:1 1 260px;display:flex;flex-direction:column;gap:2px}.ptrial b{font-size:15.5px;color:var(--ink)}.ptrial span{font-size:14px;color:#4C625E}
+.ptrial code{font-family:"DM Sans",monospace;font-weight:700;font-size:22px;letter-spacing:.12em;background:#fff;border:1px dashed #9CC9C9;border-radius:10px;padding:8px 14px;color:var(--ink)}
+.pcopy{font:inherit;font-weight:600;font-size:14px;border:1px solid #9CC9C9;background:#fff;color:#2F7A7A;border-radius:10px;padding:9px 14px;cursor:pointer}.pcopy:hover{background:#2F7A7A;color:#fff}
+.ptrial a{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:14.5px;color:#2F7A7A;text-decoration:none}.ptrial a:hover{text-decoration:underline}
+.honey .ptrial{background:#FBF1DC;color:#8A5A12}.honey .ptrial code{border-color:#E6C27A}.honey .pcopy{border-color:#E6C27A;color:#9A6512}.honey .pcopy:hover{background:#9A6512;color:#fff}.honey .ptrial a{color:#9A6512}
+.pexplore{margin-top:auto;display:flex;align-items:center;justify-content:space-between;text-decoration:none;font-weight:600;border-radius:12px;padding:14px 20px;font-size:15.5px;transition:filter .15s}
+.pexplore:hover{filter:brightness(.96)}
+.teal .pmini{background:#E5F1EC;color:#2E7D6B}.teal .pbig{background:#E0EFE8;color:#2E7D6B}.teal .pexplore{background:#E4F2EC;color:#1E7D6B}
+.coral .pmini{background:#FCEDE5;color:#C0694A}.coral .pbig{background:#FBE8DD;color:#C0694A}.coral .pexplore{background:#FCEDE5;color:#C0694A}
+.indigo .pmini{background:#ECEEF9;color:#5E68A8}.indigo .pbig{background:#E8EBF8;color:#5E68A8}.indigo .pexplore{background:#ECEEF9;color:#5E68A8}
+.honey .pmini{background:#FCF1DA;color:#C08A2A}.honey .pbig{background:#FBEFD5;color:#C08A2A}.honey .pexplore{background:#FBF1DC;color:#B47C1E}
+.blue .pmini{background:#E8F0FB;color:#3E6DB5}.blue .pbig{background:#E3ECFA;color:#3E6DB5}.blue .pexplore{background:#E8F0FB;color:#2F5EA8}
+.sea .pmini{background:#E6F2F2;color:#3C8686}.sea .pbig{background:#E2F0F0;color:#3C8686}.sea .pexplore{background:#E6F2F2;color:#2F7A7A}
+
+/* vision / mission */
+.vision{padding:110px 0}
+.mission{padding:110px 0;background:#FAFAF8}
+.vision h2,.mission h2{font-size:clamp(34px,4vw,48px);line-height:1.15;margin-bottom:26px}
+
+/* values */
+.values{background:#F6F9F7;padding:110px 0}
+.values h2{font-size:clamp(34px,4vw,48px);margin-bottom:18px}
+.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.val{background:#fff;border:1px solid #E6EEEA;border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:10px;text-decoration:none;color:var(--ink);transition:box-shadow .2s,transform .2s}.val:hover{box-shadow:0 16px 34px rgba(23,59,58,.08);transform:translateY(-2px)}.val .vic{margin-bottom:12px}.vtx{color:var(--muted);font-size:15px;line-height:1.6}.vmore{display:inline-flex;align-items:center;gap:6px;margin-top:8px;font-weight:600;font-size:14.5px;color:var(--teal)}
+.val b{font-size:17px;font-weight:600;letter-spacing:-.02em}
+.vic{width:46px;height:46px;border-radius:12px;background:#E5F1EC;color:var(--teal);display:flex;align-items:center;justify-content:center}
+
+/* everyone */
+.every{padding:110px 0}
+.every h2{font-size:clamp(34px,4vw,48px);line-height:1.12;margin-bottom:18px;max-width:600px}
+.rgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.role{border-radius:26px;padding:26px;min-height:256px;display:flex;flex-direction:column;justify-content:flex-end;gap:10px;text-decoration:none;position:relative;transition:transform .2s}
+.role:hover{transform:translateY(-3px)}
+.role .ric{position:absolute;left:26px;top:26px;width:52px;height:52px;border-radius:14px;background:rgba(255,255,255,.75);display:flex;align-items:center;justify-content:center;color:var(--teal)}
+.role b{font-size:20px;letter-spacing:-.03em}
+.role span:last-child{color:var(--muted);font-size:15px;line-height:1.6}
+.mint{background:#EAF3EE}.sky{background:#EDF1F9}.sand{background:#F8F0E3}.rose{background:#F6EBEB}
+
+/* footer */
+footer{background:#1B3D3D;color:#CFE0DB;padding:76px 0 34px}
+.fgrid{display:grid;grid-template-columns:1.35fr 1fr .85fr;gap:40px}
+footer .brand b{color:#fff}footer .brand small{color:#8FC7B6}
+footer .brand img{background:#fff;border-radius:50%;padding:3px}
+footer h4{margin:0 0 22px;color:#fff;font-size:13.5px;letter-spacing:.08em;text-transform:uppercase}
+footer p{margin:0;line-height:1.75;font-size:15px}
+.flist{display:flex;flex-direction:column;gap:14px}
+.flist a{text-decoration:none;font-size:15px}.flist a:hover,.fmail:hover{color:#fff}
+.fmail{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:15px}
+.social{display:flex;gap:14px;margin-top:20px;color:#CFE0DB}
+.fbot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;border-top:1px solid #2F5554;margin-top:56px;padding-top:26px;font-size:13px;color:#9DB9B2}
+
+@media (max-width:1080px){.links{display:none}.menu{display:block}.nav .btn{display:none}.links.open{display:flex;position:absolute;top:80px;left:0;right:0;flex-direction:column;gap:0;background:#fff;border-bottom:1px solid #EDF1EF;padding:8px 24px}.links.open a{padding:14px 0;border-top:1px solid #F0F3F2}}
+@media (max-width:960px){.hgrid,.split{grid-template-columns:1fr;gap:56px}.split .panel{order:-1}.mission .split .panel{order:-1}.rgrid{grid-template-columns:1fr 1fr}.fgrid{grid-template-columns:1fr 1fr}.fgrid>div:first-child{grid-column:1/-1}}
+@media (max-width:700px){.pgrid,.vgrid{grid-template-columns:1fr}.pcard.wide{grid-column:auto}.hgrid{padding:56px 24px 70px}.ring{width:88%}.tag{font-size:11.5px;padding:7px 10px}.t2{right:-6%}.t3{right:-10%}.about,.plat,.vision,.mission,.values,.every{padding:80px 0}.phd .count{margin-left:0}}
+@media (max-width:480px){.rgrid,.fgrid{grid-template-columns:1fr}.role{min-height:210px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+.art{max-width:760px;margin:0 auto;padding:70px 24px 90px}
+.crumb{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14.5px;color:var(--teal);text-decoration:none;margin-bottom:34px}
+.crumb svg{transform:rotate(180deg)}
+.ahead{display:flex;align-items:center;gap:16px;margin-bottom:22px}.ahead .vic{width:58px;height:58px;border-radius:16px}
+.art h1{font-size:clamp(34px,5vw,50px);line-height:1.12;margin-bottom:22px}
+.art .alead{font-size:19px;line-height:1.75;color:#3E5552;margin:0 0 40px}
+.art h2{font-size:24px;margin:40px 0 12px}
+.art p{font-size:17px;line-height:1.85;color:#3E5552;margin:0}
+.atip{margin-top:40px;background:#EEF5F1;border-radius:20px;padding:24px 26px}.atip h2{margin-top:0}
+.arefs{margin-top:44px;border-top:1px solid var(--line);padding-top:28px}
+.arefs h2{font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin:0 0 14px}
+.arefs ol{margin:0;padding-left:20px;color:#3E5552;line-height:1.7;font-size:15.5px}.arefs li{margin-bottom:10px}
+.arefs a{color:var(--teal);word-break:break-word}
+.aplat{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.amore{background:#F6F9F7;padding:70px 0}.amore h2{font-size:26px;margin-bottom:22px}
+.agrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:760px){.agrid{grid-template-columns:1fr 1fr}}@media (max-width:480px){.agrid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="../index.html"><img src="../img/thinknest-bird.png" alt="" width="52" height="52"><span><b>ThinkNest</b><small>EDUCATION</small></span></a>
+<nav class="links" style="display:flex;margin-left:auto"><a href="../index.html#values">Our Core Values</a></nav>
+</div></header>
+<main>
+<article class="art">
+<a class="crumb" href="../index.html#values"><svg class="ic " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg> Our Core Values</a>
+<div class="ahead"><span class="vic"><svg class="ic " width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg></span><div class="kick" style="margin:0">Core value · Excellence</div></div>
+<h1>Small steps, high standards</h1>
+<p class="alead">Excellence is not about one big test. It’s about knowing where each child is today and what will help them take the next step.</p>
+<h2>What excellence means to us</h2><p>We hold our platforms to high standards: curriculum-aligned content, accurate data and feedback that teachers can act on. Excellence for children grows from many small, well-chosen steps.</p><h2>What the research says</h2><p>In their classic paper <i>Inside the Black Box</i>, Paul Black and Dylan Wiliam of King’s College London argued that formative assessment, using evidence of learning to adapt teaching, is at the heart of effective teaching and can raise standards. They stressed that feedback should show each pupil how to improve and give them time to act on it, and warned that rushed or partial attempts achieve little.</p><h2>How it shows up in our platforms</h2><p><b>Maths Quest</b> runs start-of-year checks linked to National Curriculum objectives and turns each child’s tricky topics into their daily practice. <b>TwigNest</b> tracks attainment and progress from baseline so teachers can see exactly what to teach next. <b>GrowNest</b> links lesson observations to the UAE inspection framework.</p>
+<div class="atip"><h2>A tip for your school</h2><p>After any assessment, ask: “What will we do differently tomorrow because of this?” If nothing changes, the assessment was only a measurement.</p></div>
+<div class="aplat"><a class="btn dark" href="https://school-mathquest.com">Explore Maths Quest <svg class="ic " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a><a class="btn light" href="https://nestopia.school/twignest/">Explore TwigNest <svg class="ic " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></div>
+<div class="arefs"><h2>References</h2><ol><li>Black, P. &amp; Wiliam, D. (1998). Inside the Black Box: Raising Standards Through Classroom Assessment. <i>Phi Delta Kappan</i>, 80(2), 139–148. <a href="https://kappanonline.org/browsing-assessing-student-learning/" rel="noopener" target="_blank">https://kappanonline.org/browsing-assessing-student-learning/</a></li></ol></div>
+</article>
+<section class="amore"><div class="wrap"><h2>More of our core values</h2><div class="agrid"><a class="val" href="innovation.html"><span class="vic"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg></span><b>Innovation</b><span class="vtx">Fresh ideas, built for real classrooms.</span></a><a class="val" href="empowerment.html"><span class="vic"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span><b>Empowerment</b><span class="vtx">Tools that give teachers time and control.</span></a><a class="val" href="connection.html"><span class="vic"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg></span><b>Connection</b><span class="vtx">School, home and children working together.</span></a><a class="val" href="accessibility.html"><span class="vic"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="4" r="1"/><path d="m18 19 1-7-6 1"/><path d="m5 8 3-3 5.5 3-2.36 3.5"/><path d="M4.24 14.5a5 5 0 0 0 6.88 6"/><path d="M13.76 17.5a5 5 0 0 0-6.88-6"/></svg></span><b>Accessibility</b><span class="vtx">Every child can take part, at their own pace.</span></a><a class="val" href="continuous-growth.html"><span class="vic"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg></span><b>Continuous Growth</b><span class="vtx">Learning that never stops, for children and adults.</span></a></div></div></section>
+</main>
+<footer><div class="wrap"><div class="fbot" style="margin-top:0;border-top:0;padding-top:0"><span>© 2026 ThinkNest Education. All rights reserved.</span><a href="../index.html" style="color:#CFE0DB">thinknest.education</a></div></div></footer>
+</body>
+</html>
