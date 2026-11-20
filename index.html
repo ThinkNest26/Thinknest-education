@@ -165,13 +165,13 @@ footer p{margin:0;line-height:1.75;font-size:15px}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 
 /* about collage */
-.collage{position:relative;border-radius:32px;aspect-ratio:1.18;background:radial-gradient(circle at 50% 50%,#fff 0,rgba(255,255,255,0) 38%),linear-gradient(135deg,#EAF4EE,#F6F4EA)}
-.cbird{position:absolute;left:50%;top:50%;width:30%;aspect-ratio:1;transform:translate(-50%,-50%);background:#fff;border-radius:50%;box-shadow:0 0 0 12px rgba(255,255,255,.55),0 24px 50px rgba(30,125,107,.15);display:flex;align-items:center;justify-content:center}
+.collage{position:relative;border-radius:32px;aspect-ratio:1;background:radial-gradient(circle at 50% 50%,#fff 0,rgba(255,255,255,0) 38%),linear-gradient(135deg,#EAF4EE,#F6F4EA)}
+.cbird{position:absolute;left:50%;top:50%;width:27%;aspect-ratio:1;transform:translate(-50%,-50%);background:#fff;border-radius:50%;box-shadow:0 0 0 12px rgba(255,255,255,.55),0 24px 50px rgba(30,125,107,.15);display:flex;align-items:center;justify-content:center}
 .cbird img{width:80%;animation:bob 4s ease-in-out infinite}
-.mini{position:absolute;width:40%;background:#fff;border-radius:18px;padding:12px 14px;box-shadow:0 14px 34px rgba(23,59,58,.10);animation:float 6s ease-in-out infinite;font-size:12.5px}
+.mini{position:absolute;width:37%;background:#fff;border-radius:18px;padding:12px 14px;box-shadow:0 14px 34px rgba(23,59,58,.10);animation:float 6s ease-in-out infinite;font-size:12.5px}
 .mh{display:flex;align-items:center;gap:7px;font-weight:700;font-size:12.5px;margin-bottom:8px;color:var(--ink)}.dot{width:8px;height:8px;border-radius:50%}
 .mtag{display:flex;align-items:center;gap:6px;margin-top:8px;color:var(--muted);font-weight:500;font-size:12px}.mtag .ic{color:var(--teal)}
-.m1{left:4%;top:6%;transform:rotate(-3deg)}.m2{right:4%;top:9%;transform:rotate(3deg);animation-delay:-1.5s}.m3{left:6%;bottom:6%;transform:rotate(2deg);animation-delay:-3s}.m4{right:3%;bottom:8%;transform:rotate(-2deg);animation-delay:-4.5s}
+.m1{left:3%;top:3%;transform:rotate(-3deg)}.m2{right:3%;top:5%;transform:rotate(3deg);animation-delay:-1.5s}.m3{left:3%;bottom:4%;transform:rotate(2deg);animation-delay:-3s}.m4{right:3%;bottom:3%;transform:rotate(-2deg);animation-delay:-4.5s}
 .friends{display:flex;align-items:flex-end;gap:2px;height:52px}.friends img{height:100%}
 .tiles{display:flex;gap:5px}.tiles b{width:28px;height:32px;border-radius:7px;background:#FBF1DC;border:1px solid #EBCB86;display:flex;align-items:center;justify-content:center;font-size:17px;color:#8A5A12;animation:tile 4s ease-in-out infinite}
 .tiles b:nth-child(2){animation-delay:.25s}.tiles b:nth-child(3){animation-delay:.5s}.tiles b:nth-child(4){animation-delay:.75s}
@@ -202,7 +202,7 @@ footer p{margin:0;line-height:1.75;font-size:15px}
 .dt{font-weight:700;font-size:13px;color:#8B7A6E;padding-top:8px;text-align:right}
 .dic{width:36px;height:36px;border-radius:11px;background:#fff;color:var(--c);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 14px rgba(23,59,58,.08);position:relative;z-index:1}
 .dstep b{font-size:14.5px}.dstep p{margin:2px 0 0;font-size:14px;line-height:1.5;color:#4C625E}
-@media (max-width:700px){.mini{width:46%;font-size:11.5px;padding:10px}.friends,.bars{height:38px}.tiles b{width:22px;height:26px;font-size:14px}.nic{width:42px;height:42px}.nl{font-size:11px}.dayc{padding:26px 20px}}
+@media (max-width:700px){.collage{aspect-ratio:auto;display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:18px}.cbird{position:relative;grid-column:1/-1;left:auto;top:auto;transform:none;width:44%;margin:4px auto 10px}.mini{position:relative;width:auto;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;transform:none!important;animation:none;font-size:11.5px;padding:10px}.friends,.bars{height:38px}.tiles b{width:22px;height:26px;font-size:14px}.nic{width:42px;height:42px}.nl{font-size:11px}.dayc{padding:26px 20px}}
 </style>
 </head>
 <body>
@@ -245,8 +245,8 @@ footer p{margin:0;line-height:1.75;font-size:15px}
 <div class="collage" aria-hidden="true">
 <div class="cbird"><img src="img/thinknest-bird.png" alt=""></div>
 <div class="mini m1"><div class="mh"><span class="dot" style="background:#3C8686"></span>Maths Quest</div><div class="friends"><img src="img/hub-friend-square.svg" alt=""><img src="img/hub-friend-circle.svg" alt=""><img src="img/hub-friend-triangle.svg" alt=""></div><div class="mtag"><svg class="ic " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Daily challenge done</div></div>
-<div class="mini m2"><div class="mh"><span class="dot" style="background:#C08A2A"></span>Spelling Bee</div><div class="tiles"><b>g</b><b>r</b><b>o</b><b>w</b></div><div class="mtag">Kate: “Spell <i>grow</i>.”</div></div>
-<div class="mini m3"><div class="mh"><span class="dot" style="background:#5E68A8"></span>TwigNest</div><div class="bars"><i style="--h:30%"></i><i style="--h:46%"></i><i style="--h:58%"></i><i style="--h:72%"></i><i style="--h:88%"></i></div><div class="mtag">Progress since baseline</div></div>
+<div class="mini m2"><div class="mh"><span class="dot" style="background:#C08A2A"></span>Spelling Bee</div><div class="tiles"><b>g</b><b>r</b><b>o</b><b>w</b></div><div class="mtag"><span>Kate: “Spell <b>grow</b>.”</span></div></div>
+<div class="mini m3"><div class="mh"><span class="dot" style="background:#5E68A8"></span>TwigNest</div><div class="bars"><i style="--h:30%"></i><i style="--h:46%"></i><i style="--h:58%"></i><i style="--h:72%"></i><i style="--h:88%"></i></div><div class="mtag"><span>Progress since baseline</span></div></div>
 <div class="mini m4"><div class="mh"><span class="dot" style="background:#C0694A"></span>GrowNest</div><div class="note"><span>Strength</span>Great questioning to check understanding</div><div class="mtag"><svg class="ic " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> Feedback sent to teacher</div></div>
 </div>
 <div>
