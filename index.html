@@ -3,256 +3,305 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ThinkNest Education — one home for all our platforms</title>
-<meta name="description" content="ThinkNest Education: Nestopia, GrowNest, TwigNest, Maths Quest, Spelling Bee and ThinkNest. Platforms for school leaders, teachers, children and families, made by educators.">
+<title>ThinkNest Education — One Nest. Infinite Possibilities.</title>
+<meta name="description" content="ThinkNest Education brings together Nestopia, GrowNest, TwigNest, Spelling Bee and Maths Quest: connected platforms for school leaders, teachers, students and parents.">
 <meta property="og:title" content="ThinkNest Education">
-<meta property="og:description" content="One home for all our platforms — for leaders, teachers, children and families.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='19' fill='%23E8F1FD'/%3E%3Cpath d='M11 24c3-7 9-10 17-9-3 1-5 3-6 6 3-1 5-1 7 0-5 1-8 4-10 8-3-2-6-3-8-5z' fill='%232F80ED'/%3E%3C/svg%3E">
+<meta property="og:description" content="One Nest. Infinite Possibilities. Connected platforms for every part of the school community.">
+<meta property="og:image" content="https://thinknest.education/img/thinknest-bird.png">
+<link rel="icon" type="image/png" href="img/thinknest-favicon.png">
+<link rel="apple-touch-icon" href="img/thinknest-bird.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&amp;family=Nunito:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <style>
-body{margin:0;background:#F6F8FB}
+:root{--ink:#173B3A;--teal:#1E7D6B;--coral:#E07B53;--muted:#5F7470;--line:#E3ECE8;--mint:#EEF5F1;--wrap:1180px}
+*{box-sizing:border-box}
 html{scroll-behavior:smooth}
-a{color:#1F5FBF}a:hover{color:#16478F}
-a[href^="#"],a[href^="http"],a[href^="mailto"]{transition:transform .15s,box-shadow .15s}
-#login a[href]:hover{border-color:#2F80ED !important;box-shadow:0 4px 14px rgba(47,128,237,.15)}
-section{scroll-margin-top:20px}
-@media (max-width:560px){h1{font-size:38px !important} #top > div{padding-top:40px !important}}
+body{margin:0;font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+section{scroll-margin-top:84px}
+h1,h2,h3{margin:0;letter-spacing:-.035em;color:var(--ink)}
+.kick{display:flex;align-items:center;gap:12px;font-size:12.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:18px}
+.kick:before{content:"";width:20px;height:2px;background:var(--coral);border-radius:2px}
+.lead{font-size:17px;line-height:1.85;color:var(--muted);margin:0}
+.ic{display:block;flex:none}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid #EDF1EF}
+.nav{display:flex;align-items:center;gap:24px;height:80px}
+.brand{display:flex;align-items:center;gap:8px;text-decoration:none}
+.brand img{width:52px;height:52px}
+.brand b{display:block;font-size:20px;letter-spacing:-.03em;line-height:1}
+.brand small{display:block;font-size:9.5px;font-weight:700;letter-spacing:.24em;color:var(--teal);margin-top:4px}
+.links{display:flex;gap:26px;margin:0 auto;font-weight:500;font-size:14.5px}
+.links a{text-decoration:none;color:#2F4A48}.links a:hover{color:var(--teal)}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;font-size:15px;border-radius:12px;padding:14px 22px;transition:transform .15s,box-shadow .15s,background .15s}
+.btn.dark{background:var(--ink);color:#fff;box-shadow:0 8px 20px rgba(23,59,58,.18)}
+.btn.dark:hover{transform:translateY(-1px);box-shadow:0 12px 26px rgba(23,59,58,.24)}
+.btn.light{background:#fff;color:var(--ink);border:1px solid #DDE6E2}
+.btn.light:hover{border-color:var(--teal)}
+.menu{display:none;margin-left:auto;background:none;border:1px solid #DDE6E2;border-radius:10px;padding:10px 12px;font:inherit;font-weight:600;color:var(--ink)}
+
+/* hero */
+.hero{background:radial-gradient(1200px 600px at 85% 90%,#FDF3EA 0,rgba(253,243,234,0) 60%),linear-gradient(135deg,#EAF4EE 0%,#F4F9F5 55%,#FAF8F2 100%);overflow:hidden;position:relative}
+.hero:before{content:"";position:absolute;left:-180px;bottom:-260px;width:420px;height:420px;border:1px solid #DCE9E3;border-radius:50%}
+.hgrid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:40px;padding:84px 24px 90px}
+.hero h1{font-size:clamp(46px,6.2vw,80px);line-height:1.12;font-weight:700}
+.hero h1 span{color:var(--teal)}
+.hero .lead{max-width:540px;margin:28px 0 34px;font-size:17.5px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.ring{position:relative;width:min(100%,560px);aspect-ratio:1;margin:0 auto}
+.ring .c1,.ring .c2{position:absolute;border-radius:50%}
+.ring .c1{inset:0;border:1px dashed #C7DCD3}
+.ring .c2{inset:10%;border:1px solid #DCE9E3}
+.ring .core{position:absolute;inset:24%;border-radius:50%;background:radial-gradient(circle at 50% 40%,#fff 0,#F4FAF7 70%);box-shadow:0 0 0 14px rgba(255,255,255,.6),0 30px 60px rgba(30,125,107,.14);display:flex;align-items:center;justify-content:center}
+.ring .core img{width:72%;animation:bob 4s ease-in-out infinite}
+.tag{position:absolute;display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #EDF2F0;border-radius:12px;padding:10px 14px;font-size:13px;font-weight:600;text-decoration:none;box-shadow:0 10px 24px rgba(23,59,58,.08);animation:float 6s ease-in-out infinite;white-space:nowrap}
+.tag:hover{border-color:currentColor}
+.t1{left:4%;top:9%;color:#2E6E62}.t2{right:-4%;top:17%;color:#B9673F;animation-delay:-1s}.t3{right:-8%;top:49%;color:#5E68A8;animation-delay:-2s}.t4{left:-2%;bottom:13%;color:#3C8686;animation-delay:-3s}.t5{right:2%;bottom:13%;color:#B6801E;animation-delay:-4s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-6px) rotate(-2deg)}}
+
+/* illustration panel */
+.panel{position:relative;border-radius:32px;aspect-ratio:1.42;background:linear-gradient(135deg,#EAF4EE,#F6F4EA);overflow:hidden}
+.panel.warm{background:linear-gradient(135deg,#FCF1E8,#EEF5EE)}
+.panel .r{position:absolute;left:50%;top:50%;border-radius:50%;transform:translate(-50%,-50%)}
+.panel .r1{width:62%;aspect-ratio:1;border:1px solid #D4E4DC}.panel .r2{width:44%;aspect-ratio:1;border:1px solid #DCE9E3}
+.panel .r.dash{width:50%;border:1px dashed #BFD8CC}
+.panel .mid{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:28%;aspect-ratio:1;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 18px 40px rgba(23,59,58,.08)}
+.panel .mid.sq{border-radius:28px;color:var(--teal)}
+.panel .mid.sq.coral{color:var(--coral)}
+.panel .mid img{width:78%}
+.orb{position:absolute;width:48px;height:48px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;color:var(--teal);box-shadow:0 10px 22px rgba(23,59,58,.08)}
+.panel .sqorbs .orb{border-radius:14px;width:44px;height:44px}
+.o1{left:24%;top:16%}.o2{right:12%;top:20%}.o3{left:20%;bottom:20%}.o4{right:22%;bottom:18%}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}
+
+/* about */
+.about{padding:120px 0}
+.about h2{font-size:clamp(34px,4vw,48px);line-height:1.12;margin-bottom:26px}
+
+/* platforms */
+.plat{background:#F6F9F7;padding:110px 0}
+.phd{display:flex;flex-wrap:wrap;align-items:flex-end;gap:16px;margin-bottom:46px}
+.phd h2{font-size:clamp(34px,4vw,48px);line-height:1.1;margin-bottom:18px}
+.phd .count{margin-left:auto;color:var(--teal);font-weight:600;font-size:14px}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.pcard{background:#fff;border:1px solid #E6EEEA;border-radius:26px;padding:28px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(23,59,58,.03);transition:box-shadow .2s,transform .2s}
+.pcard:hover{box-shadow:0 18px 40px rgba(23,59,58,.08);transform:translateY(-2px)}
+.pcard.wide{grid-column:1/-1}
+.pcard.wide .pdesc{max-width:470px}
+.phead{display:flex;align-items:flex-start;gap:14px}
+.pmini{width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center}
+.pname{flex:1;padding-top:8px}.pname h3{font-size:20px}.psub{font-size:13.5px;color:var(--muted);margin-top:4px}
+.pbig{width:74px;height:74px;border-radius:22px;display:flex;align-items:center;justify-content:center;transform:rotate(-4deg)}
+.pdesc{color:var(--muted);font-size:16px;line-height:1.7;margin:30px 0 26px}
+.plabel{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6B7D79;margin-bottom:12px}
+.plabel span{letter-spacing:.04em;text-transform:none;font-weight:600;color:#9AABA7}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chip{display:inline-flex;align-items:center;gap:7px;border:1px solid #E3EAE7;border-radius:10px;padding:8px 11px;font-size:12.5px;font-weight:600;color:#2F4A48;text-decoration:none;transition:all .15s}
+.chip .go{display:none;margin-left:2px}
+.chip:hover{background:var(--ink);border-color:var(--ink);color:#fff}.chip:hover .go{display:block}
+.pexplore{margin-top:auto;display:flex;align-items:center;justify-content:space-between;text-decoration:none;font-weight:600;border-radius:12px;padding:14px 20px;font-size:15.5px;transition:filter .15s}
+.pexplore:hover{filter:brightness(.96)}
+.teal .pmini{background:#E5F1EC;color:#2E7D6B}.teal .pbig{background:#E0EFE8;color:#2E7D6B}.teal .pexplore{background:#E4F2EC;color:#1E7D6B}
+.coral .pmini{background:#FCEDE5;color:#C0694A}.coral .pbig{background:#FBE8DD;color:#C0694A}.coral .pexplore{background:#FCEDE5;color:#C0694A}
+.indigo .pmini{background:#ECEEF9;color:#5E68A8}.indigo .pbig{background:#E8EBF8;color:#5E68A8}.indigo .pexplore{background:#ECEEF9;color:#5E68A8}
+.honey .pmini{background:#FCF1DA;color:#C08A2A}.honey .pbig{background:#FBEFD5;color:#C08A2A}.honey .pexplore{background:#FBF1DC;color:#B47C1E}
+.sea .pmini{background:#E6F2F2;color:#3C8686}.sea .pbig{background:#E2F0F0;color:#3C8686}.sea .pexplore{background:#E6F2F2;color:#2F7A7A}
+
+/* vision / mission */
+.vision{padding:110px 0}
+.mission{padding:110px 0;background:#FAFAF8}
+.vision h2,.mission h2{font-size:clamp(34px,4vw,48px);line-height:1.15;margin-bottom:26px}
+
+/* values */
+.values{background:#F6F9F7;padding:110px 0}
+.values h2{font-size:clamp(34px,4vw,48px);margin-bottom:18px}
+.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.val{background:#fff;border:1px solid #E6EEEA;border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:22px}
+.val b{font-size:17px;font-weight:600;letter-spacing:-.02em}
+.vic{width:46px;height:46px;border-radius:12px;background:#E5F1EC;color:var(--teal);display:flex;align-items:center;justify-content:center}
+
+/* everyone */
+.every{padding:110px 0}
+.every h2{font-size:clamp(34px,4vw,48px);line-height:1.12;margin-bottom:18px;max-width:600px}
+.rgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.role{border-radius:26px;padding:26px;min-height:256px;display:flex;flex-direction:column;justify-content:flex-end;gap:10px;text-decoration:none;position:relative;transition:transform .2s}
+.role:hover{transform:translateY(-3px)}
+.role .ric{position:absolute;left:26px;top:26px;width:52px;height:52px;border-radius:14px;background:rgba(255,255,255,.75);display:flex;align-items:center;justify-content:center;color:var(--teal)}
+.role b{font-size:20px;letter-spacing:-.03em}
+.role span:last-child{color:var(--muted);font-size:15px;line-height:1.6}
+.mint{background:#EAF3EE}.sky{background:#EDF1F9}.sand{background:#F8F0E3}.rose{background:#F6EBEB}
+
+/* footer */
+footer{background:#1B3D3D;color:#CFE0DB;padding:76px 0 34px}
+.fgrid{display:grid;grid-template-columns:1.35fr 1fr .85fr;gap:40px}
+footer .brand b{color:#fff}footer .brand small{color:#8FC7B6}
+footer .brand img{background:#fff;border-radius:50%;padding:3px}
+footer h4{margin:0 0 22px;color:#fff;font-size:13.5px;letter-spacing:.08em;text-transform:uppercase}
+footer p{margin:0;line-height:1.75;font-size:15px}
+.flist{display:flex;flex-direction:column;gap:14px}
+.flist a{text-decoration:none;font-size:15px}.flist a:hover,.fmail:hover{color:#fff}
+.fmail{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:15px}
+.social{display:flex;gap:14px;margin-top:20px;color:#CFE0DB}
+.fbot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;border-top:1px solid #2F5554;margin-top:56px;padding-top:26px;font-size:13px;color:#9DB9B2}
+
+@media (max-width:1080px){.links{display:none}.menu{display:block}.nav .btn{display:none}.links.open{display:flex;position:absolute;top:80px;left:0;right:0;flex-direction:column;gap:0;background:#fff;border-bottom:1px solid #EDF1EF;padding:8px 24px}.links.open a{padding:14px 0;border-top:1px solid #F0F3F2}}
+@media (max-width:960px){.hgrid,.split{grid-template-columns:1fr;gap:56px}.split .panel{order:-1}.mission .split .panel{order:-1}.rgrid{grid-template-columns:1fr 1fr}.fgrid{grid-template-columns:1fr 1fr}.fgrid>div:first-child{grid-column:1/-1}}
+@media (max-width:700px){.pgrid,.vgrid{grid-template-columns:1fr}.pcard.wide{grid-column:auto}.hgrid{padding:56px 24px 70px}.ring{width:88%}.tag{font-size:11.5px;padding:7px 10px}.t2{right:-6%}.t3{right:-10%}.about,.plat,.vision,.mission,.values,.every{padding:80px 0}.phd .count{margin-left:0}}
+@media (max-width:480px){.rgrid,.fgrid{grid-template-columns:1fr}.role{min-height:210px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-<div style="font-family: Nunito, Arial, sans-serif; color: #16213E; background: #F6F8FB; width: 100%; box-sizing: border-box">
 
-<header style="background: #FFFFFF; border-bottom: 1px solid #E3E8F0">
-<div style="max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px">
-<a href="#top" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #16213E">
-<svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#E8F1FD"/><path d="M11 24c3-7 9-10 17-9-3 1-5 3-6 6 3-1 5-1 7 0-5 1-8 4-10 8-3-2-6-3-8-5z" fill="#2F80ED"/><circle cx="25" cy="16" r="1.4" fill="#16213E"/><path d="M9 28c6 3 16 3 22 0" fill="none" stroke="#B9820E" stroke-width="2.2" stroke-linecap="round"/></svg>
-<span style="font-family: Fredoka, Arial, sans-serif; font-weight: 700; font-size: 24px">ThinkNest <span style="color: #2F80ED">Education</span></span>
-</a>
-<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 6px 22px; margin-left: auto; align-items: center; font-weight: 800; font-size: 16px">
-<a href="#about" style="text-decoration: none; color: #16213E">About us</a>
-<a href="#apps" style="text-decoration: none; color: #16213E">Our platforms</a>
-<a href="#login" style="text-decoration: none; color: #16213E; border: 2px solid #16213E; padding: 10px 18px; border-radius: 999px">Log in</a>
-<a href="#demo" style="text-decoration: none; background: #16213E; color: #FFFFFF; padding: 12px 20px; border-radius: 999px">Book a demo</a>
+<header>
+<div class="wrap nav">
+<a class="brand" href="#home" aria-label="ThinkNest Education, home"><img src="img/thinknest-bird.png" alt="" width="52" height="52"><span><b>ThinkNest</b><small>EDUCATION</small></span></a>
+<nav class="links" id="links" aria-label="Main">
+<a href="#home">Home</a><a href="#about">About Us</a><a href="#platforms">Our Platforms</a><a href="#vision">Vision &amp; Mission</a><a href="#everyone">For Schools</a><a href="#contact">Contact Us</a>
 </nav>
+<a class="btn dark" href="#platforms">Explore Our Platforms <svg class="ic " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+<button class="menu" id="menu" aria-expanded="false" aria-controls="links">Menu</button>
 </div>
 </header>
 
-<section id="top" style="background: #FFFFFF">
-<div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 64px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 48px; align-items: center">
-<div style="display: flex; flex-direction: column; gap: 20px">
-<div style="font-weight: 800; letter-spacing: 3px; font-size: 13px; color: #1F5FBF">THINKNEST EDUCATION</div>
-<h1 style="font-family: Fredoka, Arial, sans-serif; font-weight: 700; font-size: clamp(40px, 5vw, 60px); line-height: 1.05; margin: 0">One nest for the whole school.</h1>
-<p style="font-size: 20px; line-height: 1.55; margin: 0; color: #3B4664">Learning games children love, tools that save teachers time, and a complete school system for leaders. Made by educators, built to work together.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 12px">
-<a href="#login" style="text-decoration: none; background: #2F80ED; color: #FFFFFF; font-weight: 800; font-size: 17px; padding: 15px 26px; border-radius: 999px">Log in to your platform</a>
-<a href="#apps" style="text-decoration: none; background: #FFFFFF; color: #16213E; border: 2px solid #16213E; font-weight: 800; font-size: 17px; padding: 13px 24px; border-radius: 999px">Explore our platforms</a>
+<main>
+<section class="hero" id="home">
+<div class="wrap hgrid">
+<div>
+<div class="kick">Welcome to ThinkNest Education</div>
+<h1>One Nest.<br><span>Infinite<br>Possibilities.</span></h1>
+<p class="lead">Empowering education through innovative technology, meaningful learning experiences and connected school communities.</p>
+<div class="ctas"><a class="btn dark" href="#platforms">Explore Our Platforms <svg class="ic " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a><a class="btn light" href="#about">Discover ThinkNest</a></div>
 </div>
-</div>
-<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px">
-<div style="background: #E6F6F4; border-radius: 22px; padding: 18px; display: flex; flex-direction: column; gap: 10px; align-items: flex-start">
-<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#12806F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg>
-<b style="font-family: Fredoka, Arial, sans-serif; font-size: 19px">Nestopia</b></div>
-<div style="background: #F3ECF8; border-radius: 22px; padding: 18px; display: flex; flex-direction: column; gap: 10px; align-items: flex-start">
-<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7A3E8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21V11"/><path d="M12 13c0-4 3-6 7-6 0 4-3 6-7 6z"/><path d="M12 11c0-3-2-5-6-5 0 3 2 5 6 5z"/></svg>
-<b style="font-family: Fredoka, Arial, sans-serif; font-size: 19px">GrowNest</b></div>
-<div style="background: #EEF1FA; border-radius: 22px; padding: 18px; display: flex; flex-direction: column; gap: 10px; align-items: flex-start">
-<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4B4FA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><path d="M7 16v-4"/><path d="M12 16V8"/><path d="M17 16v-7"/></svg>
-<b style="font-family: Fredoka, Arial, sans-serif; font-size: 19px">TwigNest</b></div>
-<div style="background: #FFF1E3; border-radius: 22px; padding: 18px; display: flex; flex-direction: column; gap: 10px; align-items: flex-start">
-<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#C4570F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>
-<b style="font-family: Fredoka, Arial, sans-serif; font-size: 19px">Maths Quest</b></div>
-<div style="background: #FFF6D6; border-radius: 22px; padding: 18px; display: flex; flex-direction: column; gap: 10px; align-items: flex-start">
-<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#9A6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.8 4.5v9L12 21l-7.8-4.5v-9z"/><path d="M9 12h6"/></svg>
-<b style="font-family: Fredoka, Arial, sans-serif; font-size: 19px">Spelling Bee</b></div>
-<div style="background: #E8F1FD; border-radius: 22px; padding: 18px; display: flex; flex-direction: column; gap: 10px; align-items: flex-start">
-<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1F5FBF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8"/><path d="M12 16v4"/></svg>
-<b style="font-family: Fredoka, Arial, sans-serif; font-size: 19px">ThinkNest</b></div>
+<div class="ring" aria-label="The ThinkNest bird surrounded by our five platforms">
+<span class="c1"></span><span class="c2"></span>
+<div class="core"><img src="img/thinknest-bird.png" alt="The ThinkNest singing bird"></div>
+<a class="tag t1" href="#nestopia"><svg class="ic " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 22v-4a2 2 0 1 0-4 0v4"/><path d="m18 10 3.447 1.724a1 1 0 0 1 .553.894V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7.382a1 1 0 0 1 .553-.894L6 10"/><path d="M18 5v17"/><path d="m4 6 7.106-3.553a2 2 0 0 1 1.788 0L20 6"/><path d="M6 5v17"/><circle cx="12" cy="9" r="2"/></svg> Nestopia</a>
+<a class="tag t2" href="#grownest"><svg class="ic " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg> GrowNest</a>
+<a class="tag t3" href="#twignest"><svg class="ic " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 16v-3"/><path d="M11 16v-6"/><path d="M15 16v-4"/><path d="M19 16V8"/><path d="m7 9 4-3 4 3 4-4"/></svg> TwigNest</a>
+<a class="tag t4" href="#mathsquest"><svg class="ic " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.3 10a.7.7 0 0 1-.626-1.079L11.4 3a.7.7 0 0 1 1.198-.043L16.3 8.9a.7.7 0 0 1-.572 1.1Z"/><rect x="3" y="14" width="7" height="7" rx="1"/><circle cx="17.5" cy="17.5" r="3.5"/></svg> Maths Quest</a>
+<a class="tag t5" href="#spellingbee"><svg class="ic " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 16 6-12 6 12"/><path d="M8 12h8"/><path d="m16 20 2 2 4-4"/></svg> Spelling Bee</a>
 </div>
 </div>
 </section>
 
-
-<section id="about" style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: start">
-<div style="display: flex; flex-direction: column; gap: 14px">
-<div style="font-weight: 800; letter-spacing: 3px; font-size: 13px; color: #1F5FBF">ABOUT US</div>
-<h2 style="font-family: Fredoka, Arial, sans-serif; font-weight: 700; font-size: 40px; margin: 0; line-height: 1.1">Made by educators, for every part of school life.</h2>
-<p style="font-size: 18px; line-height: 1.6; margin: 0; color: #3B4664">ThinkNest Education was founded by three educators who wanted better tools for the schools they know. We build platforms for leaders, teachers, children and families that are simple to use and work together.</p>
-</div>
-<div style="display: flex; flex-direction: column; gap: 16px">
-<div style="background: #FFFFFF; border: 2px solid #CFE0F8; border-radius: 24px; padding: 24px; display: flex; flex-direction: column; gap: 8px"><b style="font-family: Fredoka, Arial, sans-serif; font-size: 22px; color: #1F5FBF">Our vision</b><p style="font-size: 18px; line-height: 1.55; margin: 0">Every child loves learning, and every school has the tools to help each child grow.</p></div>
-<div style="background: #FFFFFF; border: 2px solid #CDEDE8; border-radius: 24px; padding: 24px; display: flex; flex-direction: column; gap: 8px"><b style="font-family: Fredoka, Arial, sans-serif; font-size: 22px; color: #12806F">Our mission</b><p style="font-size: 18px; line-height: 1.55; margin: 0">To build joyful, easy-to-use platforms that connect leaders, teachers, children and families, so teachers spend their time teaching and every child’s progress is seen.</p></div>
-<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px">
-<div style="background: #FFF1E3; border-radius: 18px; padding: 14px; font-weight: 800; text-align: center">Made by educators</div>
-<div style="background: #F3ECF8; border-radius: 18px; padding: 14px; font-weight: 800; text-align: center">Joyful learning</div>
-<div style="background: #EEF1FA; border-radius: 18px; padding: 14px; font-weight: 800; text-align: center">Everyone connected</div>
+<section class="about" id="about">
+<div class="wrap split">
+<div class="panel" aria-hidden="true"><span class="r r1"></span><span class="r r2"></span><div class="mid"><img src="img/thinknest-bird.png" alt=""></div><span class="orb o1"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span><span class="orb o2"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span class="orb o3"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg></span><span class="orb o4"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span></div>
+<div>
+<div class="kick">About Us</div>
+<h2>A better way to grow, together.</h2>
+<p class="lead">ThinkNest Education is an innovative educational technology ecosystem designed to simplify school operations, empower educators, engage learners and strengthen connections between schools and families. Built by educators, for education, our platforms bring together meaningful learning, intelligent tools and practical solutions that respond to the real needs of modern school communities.</p>
 </div>
 </div>
 </section>
 
-<section id="login" style="max-width: 1200px; margin: 0 auto; padding: 56px 24px 24px">
-<div style="background: #FFFFFF; border: 2px solid #E3E8F0; border-radius: 30px; padding: 32px; display: flex; flex-direction: column; gap: 22px">
-<div style="display: flex; flex-direction: column; gap: 8px"><div style="font-weight: 800; letter-spacing: 3px; font-size: 13px; color: #1F5FBF">LOG IN</div>
-<h2 style="font-family: Fredoka, Arial, sans-serif; font-weight: 700; font-size: 36px; margin: 0">Who are you?</h2>
-<p style="font-size: 18px; margin: 0; color: #3B4664">Choose your platform to log in.</p></div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px">
-<div style="background: #F6F8FB; border-radius: 26px; padding: 24px; display: flex; flex-direction: column; gap: 12px">
-<div style="display: flex; align-items: center; gap: 12px"><div style="width: 48px; height: 48px; border-radius: 14px; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#16213E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg></div><div><b style="font-family: Fredoka, Arial, sans-serif; font-size: 23px">Teachers and leaders</b><div style="color: #5A6684; font-weight: 700; font-size: 15px">Staff logins</div></div></div>
-<a href="https://nestopia.school" style="text-decoration: none; display: flex; align-items: center; justify-content: space-between; gap: 10px; background: #FFFFFF; border: 2px solid #E3E8F0; border-radius: 16px; padding: 13px 16px; color: #16213E; font-weight: 800"><span style="display: flex; align-items: center; gap: 10px"><span style="width: 12px; height: 12px; border-radius: 4px; background: #12806F"></span>Nestopia</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5A6684" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
-<a href="https://grownest-teacher.com" style="text-decoration: none; display: flex; align-items: center; justify-content: space-between; gap: 10px; background: #FFFFFF; border: 2px solid #E3E8F0; border-radius: 16px; padding: 13px 16px; color: #16213E; font-weight: 800"><span style="display: flex; align-items: center; gap: 10px"><span style="width: 12px; height: 12px; border-radius: 4px; background: #7A3E8F"></span>GrowNest</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5A6684" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
-<a href="https://nestopia.school" style="text-decoration: none; display: flex; align-items: center; justify-content: space-between; gap: 10px; background: #FFFFFF; border: 2px solid #E3E8F0; border-radius: 16px; padding: 13px 16px; color: #16213E; font-weight: 800"><span style="display: flex; align-items: center; gap: 10px"><span style="width: 12px; height: 12px; border-radius: 4px; background: #4B4FA8"></span>TwigNest (inside Nestopia)</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5A6684" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
-<a href="https://school-mathquest.com/teacher.html" style="text-decoration: none; display: flex; align-items: center; justify-content: space-between; gap: 10px; background: #FFFFFF; border: 2px solid #E3E8F0; border-radius: 16px; padding: 13px 16px; color: #16213E; font-weight: 800"><span style="display: flex; align-items: center; gap: 10px"><span style="width: 12px; height: 12px; border-radius: 4px; background: #C4570F"></span>Maths Quest</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5A6684" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
-<a href="https://school-spellingbee.com/teacher.html" style="text-decoration: none; display: flex; align-items: center; justify-content: space-between; gap: 10px; background: #FFFFFF; border: 2px solid #E3E8F0; border-radius: 16px; padding: 13px 16px; color: #16213E; font-weight: 800"><span style="display: flex; align-items: center; gap: 10px"><span style="width: 12px; height: 12px; border-radius: 4px; background: #B98600"></span>Spelling Bee</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5A6684" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
-<a href="https://thinknestonline.com/login.html" style="text-decoration: none; display: flex; align-items: center; justify-content: space-between; gap: 10px; background: #FFFFFF; border: 2px solid #E3E8F0; border-radius: 16px; padding: 13px 16px; color: #16213E; font-weight: 800"><span style="display: flex; align-items: center; gap: 10px"><span style="width: 12px; height: 12px; border-radius: 4px; background: #1F5FBF"></span>ThinkNest online teachers</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5A6684" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
-</div>
-<div style="background: #F6F8FB; border-radius: 26px; padding: 24px; display: flex; flex-direction: column; gap: 12px">
-<div style="display: flex; align-items: center; gap: 12px"><div style="width: 48px; height: 48px; border-radius: 14px; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#16213E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="10" r="2.5"/><path d="M2.5 20c0-3.5 3-6 6.5-6s6.5 2.5 6.5 6"/><path d="M15 15c3 0 6 1.5 6 5"/></svg></div><div><b style="font-family: Fredoka, Arial, sans-serif; font-size: 23px">Parents</b><div style="color: #5A6684; font-weight: 700; font-size: 15px">Follow your child’s learning</div></div></div>
-<a href="https://nestopia.school" style="text-decoration: none; display: flex; align-items: center; justify-content: space-between; gap: 10px; background: #FFFFFF; border: 2px solid #E3E8F0; border-radius: 16px; padding: 13px 16px; color: #16213E; font-weight: 800"><span style="display: flex; align-items: center; gap: 10px"><span style="width: 12px; height: 12px; border-radius: 4px; background: #12806F"></span>Nestopia parent portal</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5A6684" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
-<a href="https://school-mathquest.com/parent.html" style="text-decoration: none; display: flex; align-items: center; justify-content: space-between; gap: 10px; background: #FFFFFF; border: 2px solid #E3E8F0; border-radius: 16px; padding: 13px 16px; color: #16213E; font-weight: 800"><span style="display: flex; align-items: center; gap: 10px"><span style="width: 12px; height: 12px; border-radius: 4px; background: #C4570F"></span>Maths Quest</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5A6684" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
-<a href="https://thinknestonline.com/login.html" style="text-decoration: none; display: flex; align-items: center; justify-content: space-between; gap: 10px; background: #FFFFFF; border: 2px solid #E3E8F0; border-radius: 16px; padding: 13px 16px; color: #16213E; font-weight: 800"><span style="display: flex; align-items: center; gap: 10px"><span style="width: 12px; height: 12px; border-radius: 4px; background: #1F5FBF"></span>ThinkNest</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5A6684" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
-</div>
-<div style="background: #F6F8FB; border-radius: 26px; padding: 24px; display: flex; flex-direction: column; gap: 12px">
-<div style="display: flex; align-items: center; gap: 12px"><div style="width: 48px; height: 48px; border-radius: 14px; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#16213E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4l9 5-9 5-9-5z"/><path d="M7 11.5V16c0 1.5 2.5 3 5 3s5-1.5 5-3v-4.5"/></svg></div><div><b style="font-family: Fredoka, Arial, sans-serif; font-size: 23px">Students</b><div style="color: #5A6684; font-weight: 700; font-size: 15px">Use your login or class code</div></div></div>
-<a href="https://nestopia.school" style="text-decoration: none; display: flex; align-items: center; justify-content: space-between; gap: 10px; background: #FFFFFF; border: 2px solid #E3E8F0; border-radius: 16px; padding: 13px 16px; color: #16213E; font-weight: 800"><span style="display: flex; align-items: center; gap: 10px"><span style="width: 12px; height: 12px; border-radius: 4px; background: #12806F"></span>Nestlings (Nestopia)</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5A6684" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
-<a href="https://school-mathquest.com/play.html" style="text-decoration: none; display: flex; align-items: center; justify-content: space-between; gap: 10px; background: #FFFFFF; border: 2px solid #E3E8F0; border-radius: 16px; padding: 13px 16px; color: #16213E; font-weight: 800"><span style="display: flex; align-items: center; gap: 10px"><span style="width: 12px; height: 12px; border-radius: 4px; background: #C4570F"></span>Maths Quest</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5A6684" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
-<a href="https://school-spellingbee.com" style="text-decoration: none; display: flex; align-items: center; justify-content: space-between; gap: 10px; background: #FFFFFF; border: 2px solid #E3E8F0; border-radius: 16px; padding: 13px 16px; color: #16213E; font-weight: 800"><span style="display: flex; align-items: center; gap: 10px"><span style="width: 12px; height: 12px; border-radius: 4px; background: #B98600"></span>Spelling Bee</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5A6684" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
-<a href="https://thinknestonline.com/login.html" style="text-decoration: none; display: flex; align-items: center; justify-content: space-between; gap: 10px; background: #FFFFFF; border: 2px solid #E3E8F0; border-radius: 16px; padding: 13px 16px; color: #16213E; font-weight: 800"><span style="display: flex; align-items: center; gap: 10px"><span style="width: 12px; height: 12px; border-radius: 4px; background: #1F5FBF"></span>ThinkNest</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5A6684" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
-</div>
-</div>
-</div>
-</section>
-<section id="apps" style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 24px; display: flex; flex-direction: column; gap: 12px">
-<div style="font-weight: 800; letter-spacing: 3px; font-size: 13px; color: #1F5FBF">PICK ONE, OR USE THEM ALL TOGETHER</div>
-<h2 style="font-family: Fredoka, Arial, sans-serif; font-weight: 700; font-size: 40px; margin: 0">Our platforms</h2>
-<p style="font-size: 18px; margin: 0; color: #3B4664; max-width: 720px">Each app works on its own. Together, they cover a child’s day from the classroom to home, and a school’s year from planning to report cards.</p>
-</section>
-
-<section id="schools" style="max-width: 1200px; margin: 0 auto; padding: 32px 24px; display: flex; flex-direction: column; gap: 20px">
-<h3 style="font-family: Fredoka, Arial, sans-serif; font-weight: 600; font-size: 26px; margin: 0">For school leaders and teachers</h3>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px">
-
-<article style="background: #FFFFFF; border: 2px solid #CDEDE8; border-radius: 26px; padding: 28px; display: flex; flex-direction: column; gap: 14px; grid-column: 1 / -1">
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px">
-<div style="width: 56px; height: 56px; border-radius: 16px; background: #E6F6F4; display: flex; align-items: center; justify-content: center"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#12806F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg></div>
-<div style="flex: 1; min-width: 200px"><b style="font-family: Fredoka, Arial, sans-serif; font-size: 28px">Nestopia</b><div style="color: #12806F; font-weight: 800">The complete school system</div></div>
-<span style="background: #E6F6F4; color: #0E6658; font-weight: 800; font-size: 14px; padding: 6px 14px; border-radius: 999px">nestopia.school</span>
-</div>
-<p style="font-size: 17px; line-height: 1.6; margin: 0; color: #3B4664">Everything a school runs on, in one place: planning, assessments, attendance, report cards and calendars, with a parent portal and Nestlings, the student portal. GrowNest and TwigNest open right inside it.</p>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px 24px; font-weight: 700">
-<div style="display: flex; gap: 10px; align-items: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#12806F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Unit and lesson planner tied to curriculum coverage</div>
-<div style="display: flex; gap: 10px; align-items: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#12806F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Report cards with leader checks before parents see them</div>
-<div style="display: flex; gap: 10px; align-items: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#12806F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Parent portal and the Nestlings student portal</div>
-<div style="display: flex; gap: 10px; align-items: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#12806F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Each school uploads its own curriculum</div>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px">
-<a href="https://nestopia.school" style="text-decoration: none; background: #12806F; color: #FFFFFF; font-weight: 800; padding: 13px 22px; border-radius: 999px">Visit Nestopia</a>
-<a href="#demo" style="text-decoration: none; color: #0E6658; font-weight: 800; padding: 13px 8px">Book a demo</a>
-</div>
+<section class="plat" id="platforms">
+<div class="wrap">
+<div class="phd"><div><div class="kick">The Connected Ecosystem</div><h2>Our Educational Platforms</h2><p class="lead" style="line-height:1.6">Purpose-built tools with a shared vision: helping every part of the school community thrive.</p></div><div class="count">01 — 05 / A growing ecosystem</div></div>
+<div class="pgrid">
+<article class="pcard teal" id="nestopia">
+  <div class="phead"><span class="pmini"><svg class="ic " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg></span><div class="pname"><h3>Nestopia</h3></div><span class="pbig"><svg class="ic " width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 22v-4a2 2 0 1 0-4 0v4"/><path d="m18 10 3.447 1.724a1 1 0 0 1 .553.894V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7.382a1 1 0 0 1 .553-.894L6 10"/><path d="M18 5v17"/><path d="m4 6 7.106-3.553a2 2 0 0 1 1.788 0L20 6"/><path d="M6 5v17"/><circle cx="12" cy="9" r="2"/></svg></span></div>
+  <p class="pdesc">An interconnected school management and communication hub.</p>
+  <div class="plabel">Designed for <span>· tap to log in</span></div>
+  <div class="chips"><a class="chip" href="https://nestopia.school" title="Teachers login for Nestopia"><svg class="ic " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/></svg>Teachers<span class="go"><svg class="ic " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></svg></span></a><a class="chip" href="https://nestopia.school" title="Parents login for Nestopia"><svg class="ic " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>Parents<span class="go"><svg class="ic " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></svg></span></a><a class="chip" href="https://nestopia.school" title="Students login for Nestopia"><svg class="ic " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M8 10h8"/><path d="M8 18h8"/><path d="M8 22v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v6"/><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg>Students<span class="go"><svg class="ic " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></svg></span></a><a class="chip" href="https://nestopia.school" title="School administrators login for Nestopia"><svg class="ic " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>School administrators<span class="go"><svg class="ic " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></svg></span></a></div>
+  <a class="pexplore" href="https://nestopia.school">Explore Platform <svg class="ic " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
 </article>
-
-<article style="background: #FFFFFF; border: 2px solid #E6D7EF; border-radius: 26px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; align-items: center; gap: 14px">
-<div style="width: 56px; height: 56px; border-radius: 16px; background: #F3ECF8; display: flex; align-items: center; justify-content: center"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7A3E8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21V11"/><path d="M12 13c0-4 3-6 7-6 0 4-3 6-7 6z"/><path d="M12 11c0-3-2-5-6-5 0 3 2 5 6 5z"/></svg></div>
-<div><b style="font-family: Fredoka, Arial, sans-serif; font-size: 26px">GrowNest</b><div style="color: #7A3E8F; font-weight: 800">Observations and appraisals</div></div>
-</div>
-<p style="font-size: 17px; line-height: 1.6; margin: 0; color: #3B4664">Learning walks, formal observations and appraisals on the MOE six-point scale. Teachers get their feedback by email, with no login needed.</p>
-<div style="font-weight: 700; font-size: 15px; color: #5B4A66">Part of Nestopia, or on its own at grownest-teacher.com</div>
-<div style="margin-top: auto"><a href="https://grownest-teacher.com" style="text-decoration: none; background: #7A3E8F; color: #FFFFFF; font-weight: 800; padding: 13px 22px; border-radius: 999px; display: inline-block">Visit GrowNest</a></div>
+<article class="pcard coral" id="grownest">
+  <div class="phead"><span class="pmini"><svg class="ic " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg></span><div class="pname"><h3>GrowNest</h3></div><span class="pbig"><svg class="ic " width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5"/><path d="M12 7.5V9"/><path d="M7.5 12H9"/><path d="M16.5 12H15"/><path d="M12 16.5V15"/></svg></span></div>
+  <p class="pdesc">Lesson observations, teacher development and professional growth.</p>
+  <div class="plabel">Designed for <span>· tap to log in</span></div>
+  <div class="chips"><a class="chip" href="https://grownest-teacher.com" title="Teachers login for GrowNest"><svg class="ic " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/></svg>Teachers<span class="go"><svg class="ic " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></svg></span></a><a class="chip" href="https://grownest-teacher.com" title="School administrators login for GrowNest"><svg class="ic " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>School administrators<span class="go"><svg class="ic " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></svg></span></a></div>
+  <a class="pexplore" href="https://grownest-teacher.com">Explore Platform <svg class="ic " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
 </article>
-
-<article style="background: #FFFFFF; border: 2px solid #D9DEF2; border-radius: 26px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; align-items: center; gap: 14px">
-<div style="width: 56px; height: 56px; border-radius: 16px; background: #EEF1FA; display: flex; align-items: center; justify-content: center"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4B4FA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><path d="M7 16v-4"/><path d="M12 16V8"/><path d="M17 16v-7"/></svg></div>
-<div><b style="font-family: Fredoka, Arial, sans-serif; font-size: 26px">TwigNest</b><div style="color: #4B4FA8; font-weight: 800">Student data and progress</div></div>
-</div>
-<p style="font-size: 17px; line-height: 1.6; margin: 0; color: #3B4664">One place for every student’s data, from baseline to the end of the year. See attainment, progress and curriculum coverage, with next steps for every child.</p>
-<div style="font-weight: 700; font-size: 15px; color: #4A4F6E">Part of Nestopia</div>
-<div style="margin-top: auto"><a href="#demo" style="text-decoration: none; background: #4B4FA8; color: #FFFFFF; font-weight: 800; padding: 13px 22px; border-radius: 999px; display: inline-block">Book a demo</a></div>
+<article class="pcard indigo" id="twignest">
+  <div class="phead"><span class="pmini"><svg class="ic " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" x2="6" y1="3" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg></span><div class="pname"><h3>TwigNest</h3></div><span class="pbig"><svg class="ic " width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 16v-3"/><path d="M11 16v-6"/><path d="M15 16v-4"/><path d="M19 16V8"/><path d="m7 9 4-3 4 3 4-4"/></svg></span></div>
+  <p class="pdesc">Educational data, assessment analysis and intelligent reporting.</p>
+  <div class="plabel">Designed for <span>· tap to log in</span></div>
+  <div class="chips"><a class="chip" href="https://nestopia.school" title="Teachers login for TwigNest"><svg class="ic " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/></svg>Teachers<span class="go"><svg class="ic " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></svg></span></a><a class="chip" href="https://nestopia.school" title="School administrators login for TwigNest"><svg class="ic " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>School administrators<span class="go"><svg class="ic " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></svg></span></a></div>
+  <a class="pexplore" href="https://nestopia.school">Explore Platform <svg class="ic " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+</article>
+<article class="pcard honey" id="spellingbee">
+  <div class="phead"><span class="pmini"><svg class="ic " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 16 6-12 6 12"/><path d="M8 12h8"/><path d="m16 20 2 2 4-4"/></svg></span><div class="pname"><h3>Spelling Bee</h3></div><span class="pbig"><svg class="ic " width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/><path d="m9 9.5 2 2 4-4"/></svg></span></div>
+  <p class="pdesc">Interactive spelling practice, challenges and competitions.</p>
+  <div class="plabel">Designed for <span>· tap to log in</span></div>
+  <div class="chips"><a class="chip" href="https://school-spellingbee.com/teacher.html" title="Teachers login for Spelling Bee"><svg class="ic " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/></svg>Teachers<span class="go"><svg class="ic " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></svg></span></a><a class="chip" href="https://school-spellingbee.com" title="Parents login for Spelling Bee"><svg class="ic " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>Parents<span class="go"><svg class="ic " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></svg></span></a><a class="chip" href="https://school-spellingbee.com" title="Students login for Spelling Bee"><svg class="ic " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M8 10h8"/><path d="M8 18h8"/><path d="M8 22v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v6"/><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg>Students<span class="go"><svg class="ic " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></svg></span></a></div>
+  <a class="pexplore" href="https://school-spellingbee.com">Explore Platform <svg class="ic " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+</article>
+<article class="pcard sea wide" id="mathsquest">
+  <div class="phead"><span class="pmini"><svg class="ic " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.3 10a.7.7 0 0 1-.626-1.079L11.4 3a.7.7 0 0 1 1.198-.043L16.3 8.9a.7.7 0 0 1-.572 1.1Z"/><rect x="3" y="14" width="7" height="7" rx="1"/><circle cx="17.5" cy="17.5" r="3.5"/></svg></span><div class="pname"><h3>Maths Quest</h3><div class="psub">Mathematics Learning Platform</div></div><span class="pbig"><svg class="ic " width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="14" y="3" rx="1"/><path d="M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3"/></svg></span></div>
+  <p class="pdesc">Engaging mathematical adventures, interactive activities and personalised practice.</p>
+  <div class="plabel">Designed for <span>· tap to log in</span></div>
+  <div class="chips"><a class="chip" href="https://school-mathquest.com/teacher.html" title="Teachers login for Maths Quest"><svg class="ic " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/></svg>Teachers<span class="go"><svg class="ic " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></svg></span></a><a class="chip" href="https://school-mathquest.com/parent.html" title="Parents login for Maths Quest"><svg class="ic " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>Parents<span class="go"><svg class="ic " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></svg></span></a><a class="chip" href="https://school-mathquest.com/play.html" title="Students login for Maths Quest"><svg class="ic " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M8 10h8"/><path d="M8 18h8"/><path d="M8 22v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v6"/><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg>Students<span class="go"><svg class="ic " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></svg></span></a></div>
+  <a class="pexplore" href="https://school-mathquest.com">Explore Platform <svg class="ic " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
 </article>
 </div>
-</section>
-
-<section id="children" style="max-width: 1200px; margin: 0 auto; padding: 32px 24px; display: flex; flex-direction: column; gap: 20px">
-<h3 style="font-family: Fredoka, Arial, sans-serif; font-weight: 600; font-size: 26px; margin: 0">For children, KG2 to Grade 5</h3>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px">
-
-<article style="background: #FFFFFF; border: 2px solid #FBD9BC; border-radius: 26px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; align-items: center; gap: 14px">
-<div style="width: 56px; height: 56px; border-radius: 16px; background: #FFF1E3; display: flex; align-items: center; justify-content: center"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C4570F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></div>
-<div><b style="font-family: Fredoka, Arial, sans-serif; font-size: 26px">Maths Quest</b><div style="color: #B04E0E; font-weight: 800">A magical maths adventure</div></div>
-</div>
-<p style="font-size: 17px; line-height: 1.6; margin: 0; color: #3B4664">Seven worlds of maths that follow the National Curriculum, with friendly guardians, daily challenges, Beat the clock and class races. Teachers set tasks and run checks.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 8px; font-weight: 800; font-size: 14px">
-<span style="background: #FFF1E3; color: #9A440C; padding: 6px 12px; border-radius: 999px">Free trial</span>
-<span style="background: #FFF1E3; color: #9A440C; padding: 6px 12px; border-radius: 999px">From $330 / school / year</span>
-</div>
-<div style="margin-top: auto"><a href="https://school-mathquest.com" style="text-decoration: none; background: #C4570F; color: #FFFFFF; font-weight: 800; padding: 13px 22px; border-radius: 999px; display: inline-block">Visit Maths Quest</a></div>
-</article>
-
-<article style="background: #FFFFFF; border: 2px solid #F5E2A0; border-radius: 26px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; align-items: center; gap: 14px">
-<div style="width: 56px; height: 56px; border-radius: 16px; background: #FFF6D6; display: flex; align-items: center; justify-content: center"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#9A6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.8 4.5v9L12 21l-7.8-4.5v-9z"/><path d="M9 12h6"/></svg></div>
-<div><b style="font-family: Fredoka, Arial, sans-serif; font-size: 26px">Spelling Bee</b><div style="color: #8A5A00; font-weight: 800">Practise, play and compete</div></div>
-</div>
-<p style="font-size: 17px; line-height: 1.6; margin: 0; color: #3B4664">Word lists for every grade, read aloud by Kate, with spelling games, avatars and streaks. Run class rounds and a Grand Final on the big screen.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 8px; font-weight: 800; font-size: 14px">
-<span style="background: #FFF6D6; color: #7A5000; padding: 6px 12px; border-radius: 999px">Free 7-day trial</span>
-<span style="background: #FFF6D6; color: #7A5000; padding: 6px 12px; border-radius: 999px">From $330 / school / year</span>
-</div>
-<div style="margin-top: auto"><a href="https://school-spellingbee.com" style="text-decoration: none; background: #8A5A00; color: #FFFFFF; font-weight: 800; padding: 13px 22px; border-radius: 999px; display: inline-block">Visit Spelling Bee</a></div>
-</article>
 </div>
 </section>
 
-<section id="families" style="max-width: 1200px; margin: 0 auto; padding: 32px 24px; display: flex; flex-direction: column; gap: 20px">
-<h3 style="font-family: Fredoka, Arial, sans-serif; font-weight: 600; font-size: 26px; margin: 0">For families and online learning</h3>
-<article style="background: #FFFFFF; border: 2px solid #CFE0F8; border-radius: 26px; padding: 28px; display: flex; flex-wrap: wrap; gap: 20px 28px; align-items: center">
-<div style="width: 56px; height: 56px; border-radius: 16px; background: #E8F1FD; display: flex; align-items: center; justify-content: center"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1F5FBF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8"/><path d="M12 16v4"/></svg></div>
-<div style="flex: 999 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 8px">
-<b style="font-family: Fredoka, Arial, sans-serif; font-size: 26px">ThinkNest</b>
-<p style="font-size: 17px; line-height: 1.6; margin: 0; color: #3B4664">Online courses with real teachers, workshops for parents, and a safe community where students, parents and teachers learn together.</p>
+<section class="vision" id="vision">
+<div class="wrap split">
+<div>
+<div class="kick">Our Vision</div>
+<h2>A world of possibility, connected.</h2>
+<p class="lead">To reimagine education through a connected digital ecosystem where technology empowers every educator, inspires every learner and strengthens every school community.</p>
 </div>
-<a href="https://thinknestonline.com" style="text-decoration: none; background: #1F5FBF; color: #FFFFFF; font-weight: 800; padding: 13px 22px; border-radius: 999px">Visit ThinkNest</a>
-</article>
+<div class="panel" aria-hidden="true"><span class="r dash" style="aspect-ratio:1"></span><div class="mid sq"><svg class="ic " width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.341 6.484A10 10 0 0 1 10.266 21.85"/><path d="M3.659 17.516A10 10 0 0 1 13.74 2.152"/><circle cx="12" cy="12" r="3"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/></svg></div><div class="sqorbs"><span class="orb o1"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span class="orb o2"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg></span><span class="orb o3"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg></span><span class="orb o4"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span></div></div>
+</div>
 </section>
 
-<section style="max-width: 1200px; margin: 0 auto; padding: 48px 24px">
-<div style="background: #16213E; color: #FFFFFF; border-radius: 30px; padding: 44px 36px; display: flex; flex-direction: column; gap: 26px">
-<h2 style="font-family: Fredoka, Arial, sans-serif; font-weight: 700; font-size: 36px; margin: 0">How the family fits together</h2>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px">
-<div style="display: flex; flex-direction: column; gap: 8px"><span style="font-family: Fredoka, Arial, sans-serif; font-size: 34px; color: #7FD1C4">1</span><b style="font-size: 19px">Nestopia is the school’s home</b><span style="color: #C9D3E6; line-height: 1.55">Leaders and teachers plan, assess, report and talk to parents in one place.</span></div>
-<div style="display: flex; flex-direction: column; gap: 8px"><span style="font-family: Fredoka, Arial, sans-serif; font-size: 34px; color: #D7B6E6">2</span><b style="font-size: 19px">GrowNest and TwigNest open inside it</b><span style="color: #C9D3E6; line-height: 1.55">Observations and student data sit right next to everything else.</span></div>
-<div style="display: flex; flex-direction: column; gap: 8px"><span style="font-family: Fredoka, Arial, sans-serif; font-size: 34px; color: #FFC98F">3</span><b style="font-size: 19px">Maths Quest and Spelling Bee for practice</b><span style="color: #C9D3E6; line-height: 1.55">Children practise at school and at home, and teachers see their progress.</span></div>
+<section class="mission" id="mission">
+<div class="wrap split">
+<div class="panel warm" aria-hidden="true"><span class="r dash" style="aspect-ratio:1"></span><div class="mid sq coral"><svg class="ic " width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z"/><path d="M7 16v6"/><path d="M13 19v3"/><path d="M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5"/></svg></div><div class="sqorbs"><span class="orb o1"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg></span><span class="orb o2"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="4" r="1"/><path d="m18 19 1-7-6 1"/><path d="m5 8 3-3 5.5 3-2.36 3.5"/><path d="M4.24 14.5a5 5 0 0 0 6.88 6"/><path d="M13.76 17.5a5 5 0 0 0-6.88-6"/></svg></span><span class="orb o3"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span><span class="orb o4"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span></div></div>
+<div>
+<div class="kick">Our Mission</div>
+<h2>Technology with purpose. Learning with heart.</h2>
+<p class="lead">To create innovative, accessible and purposeful educational technology that simplifies everyday challenges, enhances teaching and learning, supports professional growth and connects schools, educators, students and families.</p>
 </div>
 </div>
 </section>
 
-<section id="demo" style="max-width: 1200px; margin: 0 auto; padding: 24px 24px 72px">
-<div style="background: #FFFFFF; border: 2px solid #E3E8F0; border-radius: 30px; padding: 40px 32px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center">
-<div style="flex: 999 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
-<h2 style="font-family: Fredoka, Arial, sans-serif; font-weight: 700; font-size: 34px; margin: 0">See it at your school</h2>
-<p style="font-size: 18px; margin: 0; color: #3B4664; line-height: 1.55">Tell us which apps you’re interested in and we’ll show you around, live and in your own time zone.</p>
-</div>
-<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 10px; align-items: flex-start">
-<a href="mailto:thinknest2026@gmail.com?subject=Demo%20request%20-%20ThinkNest%20Education" style="text-decoration: none; font-weight: 800; font-size: 17px; background: #2F80ED; color: #FFFFFF; padding: 15px 26px; border-radius: 999px">Email us to book a demo</a>
-<span style="color: #5A6684; font-weight: 700">thinknest2026@gmail.com</span>
-</div>
+<section class="values" id="values">
+<div class="wrap">
+<div class="kick">What Guides Us</div>
+<h2>Our Core Values</h2>
+<p class="lead">The principles behind every platform and every possibility.</p>
+<div class="vgrid"><div class="val"><span class="vic"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg></span><b>Innovation</b></div><div class="val"><span class="vic"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span><b>Empowerment</b></div><div class="val"><span class="vic"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg></span><b>Connection</b></div><div class="val"><span class="vic"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="4" r="1"/><path d="m18 19 1-7-6 1"/><path d="m5 8 3-3 5.5 3-2.36 3.5"/><path d="M4.24 14.5a5 5 0 0 0 6.88 6"/><path d="M13.76 17.5a5 5 0 0 0-6.88-6"/></svg></span><b>Accessibility</b></div><div class="val"><span class="vic"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg></span><b>Excellence</b></div><div class="val"><span class="vic"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg></span><b>Continuous Growth</b></div></div>
 </div>
 </section>
 
-<footer style="background: #FFFFFF; border-top: 1px solid #E3E8F0">
-<div style="max-width: 1200px; margin: 0 auto; padding: 26px 24px; display: flex; flex-wrap: wrap; gap: 10px 24px; align-items: center; font-weight: 700; color: #5A6684; font-size: 15px">
-<span>© 2026 ThinkNest Education</span>
-<a href="https://nestopia.school" style="text-decoration: none">Nestopia</a>
-<a href="https://grownest-teacher.com" style="text-decoration: none">GrowNest</a>
-<a href="https://school-mathquest.com" style="text-decoration: none">Maths Quest</a>
-<a href="https://school-spellingbee.com" style="text-decoration: none">Spelling Bee</a>
-<a href="https://thinknestonline.com" style="text-decoration: none">ThinkNest</a>
-<span style="margin-left: auto">thinknest2026@gmail.com</span>
+<section class="every" id="everyone">
+<div class="wrap">
+<div class="kick">A Place for Everyone</div>
+<h2>Education Designed for Everyone</h2>
+<p class="lead">Different journeys, one connected community.</p>
+<div class="rgrid"><a class="role mint" href="#nestopia"><span class="ric"><svg class="ic " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg></span><b>School Leaders</b><span>Make informed decisions and simplify school operations.</span></a><a class="role sky" href="#platforms"><span class="ric"><svg class="ic " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/></svg></span><b>Teachers</b><span>Teach, assess, reflect and grow with confidence.</span></a><a class="role sand" href="#spellingbee"><span class="ric"><svg class="ic " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M8 10h8"/><path d="M8 18h8"/><path d="M8 22v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v6"/><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg></span><b>Students</b><span>Explore, practise, discover and enjoy learning.</span></a><a class="role rose" href="#nestopia"><span class="ric"><svg class="ic " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span><b>Parents</b><span>Stay connected and actively involved in their children’s learning journey.</span></a></div>
+</div>
+</section>
+</main>
+
+<footer id="contact">
+<div class="wrap">
+<div class="fgrid">
+<div>
+<a class="brand" href="#home"><img src="img/thinknest-bird.png" alt="" width="46" height="46"><span><b>ThinkNest</b><small>EDUCATION</small></span></a>
+<p style="margin-top:22px">One Nest. Infinite Possibilities.<br>Bringing education together, beautifully.</p>
+</div>
+<div><h4>Our Platforms</h4><div class="flist"><a href="https://nestopia.school">Nestopia</a><a href="https://grownest-teacher.com">GrowNest</a><a href="#twignest">TwigNest</a><a href="https://school-spellingbee.com">Spelling Bee</a><a href="https://school-mathquest.com">Maths Quest</a></div></div>
+<div><h4>Connect</h4><a class="fmail" href="mailto:thinknest2026@gmail.com"><svg class="ic " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> thinknest2026@gmail.com</a>
+<div class="social" aria-label="Social media"><span title="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></span><span title="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></span><span title="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></span></div></div>
+</div>
+<div class="fbot"><span>© 2026 ThinkNest Education. All rights reserved.</span><span>Privacy policy and terms of use are available from ThinkNest Education.</span></div>
 </div>
 </footer>
 
-</div>
-
+<script>
+(function(){var b=document.getElementById('menu'),l=document.getElementById('links');if(!b)return;b.addEventListener('click',function(){var o=l.classList.toggle('open');b.setAttribute('aria-expanded',o)});l.addEventListener('click',function(e){if(e.target.tagName==='A'){l.classList.remove('open');b.setAttribute('aria-expanded','false')}})})();
+</script>
 </body>
 </html>
