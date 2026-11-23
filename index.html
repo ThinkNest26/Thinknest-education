@@ -215,6 +215,27 @@ footer p{margin:0;line-height:1.75;font-size:15px}
 .wq{background:#F3ECF8;border-radius:10px;padding:8px 10px;color:#5B3474;line-height:1.4}.wq span{display:block;font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#8A55A8;margin-bottom:2px}
 @media (min-width:701px){.collage{aspect-ratio:5/6}}@media (min-width:701px) and (max-width:1100px){.collage{aspect-ratio:3/4}}
 @media (max-width:700px){.m5,.m6{width:auto!important}}
+.nest{padding:110px 0;background:linear-gradient(180deg,#F6F9F7,#fff)}
+.ngrid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:26px;margin-top:34px;align-items:start}
+.nprice{position:relative;background:linear-gradient(150deg,#173B3A,#1E5F55);color:#fff;border-radius:28px;padding:34px 32px;box-shadow:0 24px 50px rgba(23,59,58,.22);overflow:hidden}
+.nprice:after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.06)}
+.nbird{width:74px;height:74px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:16px;box-shadow:0 0 0 8px rgba(255,255,255,.12)}.nbird img{width:80%;animation:bob 4s ease-in-out infinite}
+.nname{font-weight:700;font-size:15px;letter-spacing:.16em;text-transform:uppercase;color:#BFE3D6}
+.namt{font-weight:700;font-size:clamp(46px,5vw,60px);line-height:1.05;margin:8px 0 6px;letter-spacing:-.02em}.ncur{font-size:.55em;vertical-align:.55em;margin-right:2px}.nper{font-size:16px;font-weight:500;letter-spacing:0;color:#BFE3D6;margin-left:8px}
+.nsmall{color:#DCEFE8;margin:0 0 16px}
+.nsave{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:12px 14px;font-size:14px;line-height:1.5;margin-bottom:22px}
+.nbtn{width:100%;justify-content:center;background:#F5B700;color:#173B3A;font-weight:700;box-shadow:0 10px 24px rgba(0,0,0,.18)}.nbtn:hover{transform:translateY(-2px)}
+.nghost{width:100%;justify-content:center;margin-top:10px;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35)}.nghost:hover{background:rgba(255,255,255,.08)}
+.nprice .nfine{color:#BFE3D6}
+.nfine{font-size:13px;color:var(--muted);margin:14px 0 0;line-height:1.5}
+.ninc{background:#fff;border:1px solid #E6EEEA;border-radius:28px;padding:30px 30px 26px}
+.ninc h3{font-size:18px;margin:0 0 12px}
+.nplats,.nplus{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.nplats li{display:flex;gap:12px;align-items:flex-start;padding:10px 12px;border-radius:14px;background:#F6F9F7}
+.nplats .ndot{width:12px;height:12px;border-radius:50%;margin-top:5px;flex:none}
+.nplats b{display:block;font-size:15px;color:var(--ink)}.nplats span{font-size:13.5px;color:var(--muted)}
+.nplus li{display:flex;gap:10px;align-items:flex-start;font-size:15px;color:var(--ink)}.nplus svg{color:var(--teal);margin-top:3px;flex:none}
+@media (max-width:900px){.ngrid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -223,7 +244,7 @@ footer p{margin:0;line-height:1.75;font-size:15px}
 <div class="wrap nav">
 <a class="brand" href="#home" aria-label="ThinkNest Education, home"><img src="img/thinknest-bird.png" alt="" width="52" height="52"><span><b>ThinkNest</b><small>EDUCATION</small></span></a>
 <nav class="links" id="links" aria-label="Main">
-<a href="#home">Home</a><a href="#about">About Us</a><a href="#platforms">Our Platforms</a><a href="#vision">Vision &amp; Mission</a><a href="#everyone">For Schools</a><a href="#contact">Contact Us</a>
+<a href="#home">Home</a><a href="#about">About Us</a><a href="#platforms">Our Platforms</a><a href="#vision">Vision &amp; Mission</a><a href="#whole-nest">For Schools</a><a href="#contact">Contact Us</a>
 </nav>
 <a class="btn dark" href="#platforms">Explore Our Platforms <svg class="ic " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
 <button class="menu" id="menu" aria-expanded="false" aria-controls="links">Menu</button>
@@ -387,6 +408,33 @@ footer p{margin:0;line-height:1.75;font-size:15px}
 <h2>Education Designed for Everyone</h2>
 <p class="lead">Different journeys, one connected community.</p>
 <div class="rgrid"><a class="role mint" href="#nestopia"><span class="ric"><svg class="ic " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg></span><b>School Leaders</b><span>Make informed decisions and simplify school operations.</span></a><a class="role sky" href="#platforms"><span class="ric"><svg class="ic " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/></svg></span><b>Teachers</b><span>Teach, assess, reflect and grow with confidence.</span></a><a class="role sand" href="#spellingbee"><span class="ric"><svg class="ic " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M8 10h8"/><path d="M8 18h8"/><path d="M8 22v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v6"/><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg></span><b>Students</b><span>Explore, practise, discover and enjoy learning.</span></a><a class="role rose" href="#nestopia"><span class="ric"><svg class="ic " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span><b>Parents</b><span>Stay connected and actively involved in their children’s learning journey.</span></a></div>
+</div>
+</section>
+
+<section class="nest" id="whole-nest">
+<div class="wrap">
+<div class="kick">For Schools</div>
+<h2>The Whole Nest</h2>
+<p class="lead" style="max-width:680px">Every ThinkNest school platform in one simple yearly subscription, so your leaders, teachers, students and families all learn in the same nest.</p>
+<div class="ngrid">
+<div class="nprice">
+<div class="nbird"><img src="img/thinknest-bird.png" alt=""></div>
+<div class="nname">The Whole Nest</div>
+<div class="namt"><span class="ncur">$</span>6,900<span class="nper">/ school / year</span></div>
+<p class="nsmall">About <b>$11.50 per student a year</b> for a school of 600 students.</p>
+<div class="nsave"><b>Seven platforms, one subscription.</b> Buying them one by one would cost your school much more, with seven accounts and seven invoices.</div>
+<a class="btn nbtn" href="mailto:thinknest2026@gmail.com?subject=The%20Whole%20Nest%20subscription&amp;body=Hello%20ThinkNest%20team%2C%0A%0AWe%20would%20like%20to%20subscribe%20to%20the%20Whole%20Nest.%0A%0ASchool%20name%3A%0ACountry%3A%0ANumber%20of%20students%3A%0AContact%20name%20and%20role%3A%0APhone%3A%0A%0AThank%20you.">Subscribe to the Whole Nest <svg class="ic " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+<a class="btn nghost" href="mailto:thinknest2026@gmail.com?subject=The%20Whole%20Nest%20-%20book%20a%20demo&amp;body=Hello%20ThinkNest%20team%2C%0A%0AWe%20would%20like%20a%20demo%20of%20the%20Whole%20Nest.%0A%0ASchool%20name%3A%0ANumber%20of%20students%3A%0AContact%20name%20and%20role%3A%0ABest%20days%20and%20times%20for%20us%3A%0A%0AThank%20you."><svg class="ic " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg> Book a demo</a>
+<p class="nfine">Prices in US dollars, billed once a year. Bigger school or a group of schools? Email us for a quote.</p>
+</div>
+<div class="ninc">
+<h3>Everything in the nest</h3>
+<ul class="nplats"><li><span class="ndot" style="background:#2E7D6B"></span><div><b>Nestopia</b><span>School management, planning and communication</span></div></li><li><span class="ndot" style="background:#C0694A"></span><div><b>GrowNest</b><span>Lesson observations and teacher growth</span></div></li><li><span class="ndot" style="background:#5E68A8"></span><div><b>TwigNest</b><span>Assessment data and progress reports</span></div></li><li><span class="ndot" style="background:#C08A2A"></span><div><b>Spelling Bee</b><span>Spelling practice, GL practice and the whole competition</span></div></li><li><span class="ndot" style="background:#3C8686"></span><div><b>Maths Quest</b><span>Mental maths, daily challenges and GL practice</span></div></li><li><span class="ndot" style="background:#4E8F3A"></span><div><b>Science Quest</b><span>Science stories, challenges and GL practice</span></div></li><li><span class="ndot" style="background:#8A55A8"></span><div><b>WonderNest</b><span>PYP unit builder, wonders and ATL skills</span></div></li></ul>
+<h3 style="margin-top:22px">Plus</h3>
+<ul class="nplus"><li><svg class="ic " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Up to <b>600 students</b> and <b>unlimited teachers</b></span></li><li><svg class="ic " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Every <b>Premium</b> feature on every platform</span></li><li><svg class="ic " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>A live <b>setup and training session</b> for your teachers</span></li><li><svg class="ic " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>Priority support</b> by email</span></li><li><svg class="ic " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>One account, one invoice</b> for the whole year</span></li></ul>
+<p class="nfine" style="margin-top:14px">ThinkNest online tutoring is for families and is booked separately.</p>
+</div>
+</div>
 </div>
 </section>
 </main>
